@@ -1,5 +1,5 @@
 Project 
-  PageObject -> The xpath of element for each page, and some corresponding
+  PageObject -> The xpath of element for each page, and some corresponding method
     EditProfilePage
     HomePage
     LoginPage
