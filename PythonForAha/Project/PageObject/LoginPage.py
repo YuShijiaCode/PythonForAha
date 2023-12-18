@@ -1,10 +1,7 @@
-
 import time
-from PythonForAha.Project.Utils.Driver.Selenium import create_driver
-from PythonForAha.Project.Utils.WebCommonStep import WebCommonStep
 
 
-class LoginPage():
+class LoginPage:
     def __init__(self, common_step):
         self.common = common_step
         self._login_btn = "(//*[@class='h1-button-container'])[1]"

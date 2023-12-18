@@ -1,12 +1,11 @@
-# from PythonForAha.Project.PageObject.WebPage import WebPage
 import time
-from PythonForAha.Project.Utils.Driver.Selenium import create_driver
-from PythonForAha.Project.Utils.WebCommonStep import WebCommonStep
 
 
-class EditProfilePage():
+# Edit Profile Page
+class EditProfilePage:
     def __init__(self, common_step):
         self.common = common_step
+        # xpath for element
         self._edit_profile_btn = "//*[text()='Edit Profile']"
         self._birthday_input = "//*[@name='birthday']"
         self._save_btn = "//*[text()='Save']"

@@ -1,6 +1,7 @@
 from PythonForAha.Project.PageObject.LoginPage import LoginPage
 from PythonForAha.Project.Utils.WebCommonStep import WebCommonStep
 
+# cases for sign in with 2 ways
 class TestCase_Signin:
     def testcase_sign_in_with_email(self):
         common = WebCommonStep()
@@ -14,7 +15,6 @@ class TestCase_Signin:
         login.click_continue_btn()
         login.common.compare_title("Discover Clubs | Aha | Unlimited Exam Questions")
         login.common.close_browser()
-
 
     def testcase_sign_in_with_google(self):
         common = WebCommonStep()

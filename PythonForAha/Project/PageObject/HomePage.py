@@ -1,10 +1,7 @@
-# from PythonForAha.Project.PageObject.WebPage import WebPage
 import time
-from PythonForAha.Project.Utils.Driver.Selenium import create_driver
-from PythonForAha.Project.Utils.WebCommonStep import WebCommonStep
 
-
-class HomePage():
+# Home page
+class HomePage:
     def __init__(self, common_step):
         self.common = common_step
         self._profile_btn = ("//*[@id='__next']/div[2]/div[2]/div[1]/div[1]/div/div/div[1]/div[2]/div/div/div/div/div["

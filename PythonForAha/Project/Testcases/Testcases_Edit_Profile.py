@@ -6,6 +6,7 @@ import random
 
 
 class TestCase_Edit_Profile:
+    # case for editing profile, generate random year/month/day to check
     def testcase_edit_profile(self):
         year = random.randint(1990, 2022)
         month = random.randint(1, 12)

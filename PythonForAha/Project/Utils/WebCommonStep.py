@@ -7,7 +7,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 
-
+# common method for web operation
 class WebCommonStep:
     def __init__(self):
         self.driver = create_driver()

@@ -2,7 +2,7 @@ import smtplib
 from email.mime.text import MIMEText
 from email.header import Header
 
-
+# send email with SMTP
 def send_email(sender, receivers, report):
 
     mail_host = "smtp.163.com"

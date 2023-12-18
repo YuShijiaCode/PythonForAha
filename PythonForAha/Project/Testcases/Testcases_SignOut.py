@@ -1,8 +1,8 @@
 from PythonForAha.Project.PageObject.LoginPage import LoginPage
 from PythonForAha.Project.PageObject.HomePage import HomePage
-from PythonForAha.Project.Utils.WebCommonStep import WebCommonStep
 
 
+# cases for sign out
 class TestCase_SignOut:
     def testcase_sign_out(self):
         common = WebCommonStep()
