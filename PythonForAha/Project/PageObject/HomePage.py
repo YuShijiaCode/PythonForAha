@@ -1,44 +1,44 @@
-from PythonForAha.Project.PageObject.WebPage import WebPage
+# from PythonForAha.Project.PageObject.WebPage import WebPage
 import time
 from PythonForAha.Project.Utils.Driver.Selenium import create_driver
 from PythonForAha.Project.Utils.WebCommonStep import WebCommonStep
 
 
-class HomePage(WebPage):
-    def __init__(self):
-        super().__init__()
+class HomePage():
+    def __init__(self, common_step):
+        self.common = common_step
+        self._profile_btn = ("//*[@id='__next']/div[2]/div[2]/div[1]/div[1]/div/div/div[1]/div[2]/div/div/div/div/div["
+                             "3]/button")
+        self._setting_btn = "//*[@href='/profile/settings']"
+        self._log_out_btn = "//*[text()='LOG OUT']"
+        self._log_out_confirm_btn = "//*[text()='Yes']"
+        self._sign_up_btn = "//*[text()='Sign up']"
 
-        # self._login_btn = "//*[Text='Log In']"
+    def profile_btn(self):
+        return self._profile_btn
 
-        self._login_btn = "(//*[@class='h1-button-container'])[1]"
-        self._username = "//*[@id='username']"
-        self._password = "//*[@id='password']"
-        self._continue_btn = "/html/body/div[1]/main/section/div/div/div/form/div[3]/button"
+    def setting_btn(self):
+        return self._profile_btn
 
-    def login_btn(self):
-        return self._login_btn
+    def logout_btn(self):
+        return self._log_out_btn
 
-    def username(self):
-        return self._username
+    def sign_up_btn(self):
+        return self._sign_up_btn
 
-    def password(self):
-        return self._password
-
-    def continue_btn(self):
-        return self._continue_btn
-
-    def click_login_btn(self):
-        self.common.click(self._login_btn)
-
-    def input_username(self, text):
-        self.common.input(self._username, text)
+    def click_profile_btn(self):
+        self.common.click(self._profile_btn)
         time.sleep(1)
 
-    def input_password(self, text):
-        self.common.input(self._password, text)
+    def click_setting_btn(self):
+        self.common.click(self._setting_btn)
         time.sleep(1)
 
-    def click_continue_btn(self):
-        self.common.click(self._continue_btn)
+    def click_logout_btn(self):
+        self.common.click(self._log_out_btn)
+        time.sleep(1)
+
+    def click_logout_confirm_btn(self):
+        self.common.click(self._log_out_confirm_btn)
         time.sleep(1)
 

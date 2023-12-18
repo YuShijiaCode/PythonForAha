@@ -1,15 +1,12 @@
-from PythonForAha.Project.PageObject.WebPage import WebPage
+
 import time
 from PythonForAha.Project.Utils.Driver.Selenium import create_driver
 from PythonForAha.Project.Utils.WebCommonStep import WebCommonStep
 
 
-class LoginPage(WebPage):
-    def __init__(self):
-        super().__init__()
-
-        # self._login_btn = "//*[Text='Log In']"
-
+class LoginPage():
+    def __init__(self, common_step):
+        self.common = common_step
         self._login_btn = "(//*[@class='h1-button-container'])[1]"
         self._username = "//*[@id='username']"
         self._password = "//*[@id='password']"
@@ -19,6 +16,7 @@ class LoginPage(WebPage):
         self._google_email_next_btn = "//*[@id='identifierNext']/div/button"
         self._google_password = "//*[@name='Passwd']"
         self._google_password_next_btn = "//*[@id='passwordNext']/div/button"
+
 
     def login_btn(self):
         return self._login_btn
